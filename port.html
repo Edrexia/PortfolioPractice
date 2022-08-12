@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/700c48eb5d.js" crossorigin="anonymous"></script>
+</head>    
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Hello, my name is İrem.</p>
+            <h1>Software Development Intern</h1>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col1">
+                <img src="my_photo.jpeg">
+            </div>
+            <div class="about-col2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    I have always steered my life according to my passions. When I fall in love
+                    with an occupation or a hobby, I never let go until I achieve greatness in
+                    that area. It was love at first sight with computers and software.
+                    Sometimes it's hard, sometimes not; but I know I will always go after my
+                    passion for computer engineering. 
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>C</span></li>
+                        <li><span>C++</span></li>
+                        <li><span>Python</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2018-Current</span><br>METU Computer Engineering</li>
+                        <li><span>2015-2018</span><br>METU Electrics and Electronics Engineering</li>
+                        <li><span>2010-2014</span><br>Antalya Yusuf Ziya Öner Science High School</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>August 2022-Current</span><br>Doğuş Teknoloji<br>Intern</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="left-col">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>Irem.Fidan@d-teknoloji.com.tr</p>
+                <p><i class="fa-solid fa-mobile-screen-button"></i>+90 543 810 8001</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/irem-fidan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/iremfidan07/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/iremsu.fidan/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="right-col">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+
+
+</body>
+</html>
